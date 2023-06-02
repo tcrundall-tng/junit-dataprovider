@@ -14,6 +14,9 @@ jobs:
       - run: ./gradlew clean test
       - name: debug
         run: |
+          pwd
+          ls
+          ls *
           ls **/build/test-results/
           echo "ls **/test-result*/"
           ls **/test-result*/
