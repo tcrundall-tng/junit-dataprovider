@@ -19,10 +19,11 @@ jobs:
           ls *
           ls junit4/build/test-results/*
           ls **/build/test-results/
-          echo "ls **/test-result*/"
-          ls **/test-result*/
-          echo "ls **/test-results/**/*.xml"
-          ls **/test-results/**/*.xml
+          ls **/build/test-results/**/*.xml
+          # echo "ls **/test-result*/"
+          # ls **/test-result*/
+          # echo "ls **/test-results/**/*.xml"
+          # ls **/test-results/**/*.xml
       - name: IntegTests
         run: |
           ./gradlew integTest
@@ -33,4 +34,4 @@ jobs:
         if: always()
         with:
           files: |
-            "**/test-results/**/*.xml"
+            "**/build/test-results/**/*.xml"
