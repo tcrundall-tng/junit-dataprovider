@@ -17,6 +17,7 @@ jobs:
           pwd
           ls
           ls *
+          ls junit4/build/test-results/*
           ls **/build/test-results/
           echo "ls **/test-result*/"
           ls **/test-result*/
