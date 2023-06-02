@@ -14,10 +14,10 @@ jobs:
       - run: ./gradlew clean test
       - name: debug
         run: |
-          echo "ls **/test-results/**/*.xml"
-          ls **/test-results/**/*.xml
           echo "ls **/test-result*/"
           ls **/test-result*/
+          echo "ls **/test-results/**/*.xml"
+          ls **/test-results/**/*.xml
       - name: IntegTests
         run: |
           ./gradlew integTest
