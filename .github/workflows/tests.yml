@@ -14,6 +14,7 @@ jobs:
       - run: ./gradlew clean test
       - name: debug
         run: |
+          ls **/build/test-results/
           echo "ls **/test-result*/"
           ls **/test-result*/
           echo "ls **/test-results/**/*.xml"
