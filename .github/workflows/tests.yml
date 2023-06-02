@@ -12,9 +12,17 @@ jobs:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '8'
       - run: ./gradlew clean test
+      - name: debug
+        run: |
+          echo "ls **/test-results/**/*.xml"
+          ls **/test-results/**/*.xml
+          echo "ls **/test-result*/"
+          ls **/test-result*/
       - name: IntegTests
         run: |
           ./gradlew integTest
+      
+        
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
